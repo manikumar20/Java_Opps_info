@@ -1,0 +1,42 @@
+6.2 Write a JAVA program to implement Interface. What kind of Inheritance can be achieved?
+import java.util.Scanner;
+
+interface Internal {
+    void get_InternalMarks();
+}
+
+interface External {
+    void get_ExternalMarks();
+}
+
+interface Marks extends Internal, External {
+    void show_Marks();
+}
+
+class Results implements Marks {
+    float i1, e1;
+    Scanner sc = new Scanner(System.in);
+
+    public void get_InternalMarks() {
+        System.out.println("Enter internal marks:(0-40)");
+        i1 = sc.nextFloat();
+    }
+
+    public void get_ExternalMarks() {
+        System.out.println("Enter external marks:(0-60)");
+        e1 = sc.nextFloat();
+    }
+
+    public void show_Marks() {
+        System.out.println("Total marks = " + (i1 + e1));
+    }
+}
+
+class Interface1 {
+    public static void main(String args[]) {
+        Marks m = new Results();
+        m.get_InternalMarks();
+        m.get_ExternalMarks();
+        m.show_Marks();
+    }
+}

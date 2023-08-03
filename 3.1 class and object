@@ -1,0 +1,20 @@
+3.1 Write a JAVA program to implement class mechanism. Create a class, methods and invoke them inside main method.
+
+class Test {
+	int a,b;
+	void SetData(int i,int j) {
+		a = i;
+		b = j;
+	}	
+	void DisplayData() {
+		System.out.println("Value of a is "+a);
+		System.out.println("Value of b is "+b);
+	}
+}
+class AccessTest {
+	public static void main(String args[]) {
+		Test o1 = new Test();
+		o1.SetData(10,20);
+		o1.DisplayData();
+	}
+}

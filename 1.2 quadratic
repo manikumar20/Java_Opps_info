@@ -1,0 +1,26 @@
+1.2 Write a java program that display the roots of a quadratic equation ax2+bx=0. Calculate the discriminate D and basing on value of D, describe the nature of root.
+import java.util.Scanner;
+class Quadratic {
+ public static void main(String args[]) {
+   Scanner s = new Scanner(System.in);
+   System.out.println("Enter a value");
+   double a = s.nextDouble();
+   System.out.println("Enter b value");
+   double b = s.nextDouble();
+   System.out.println("Enter c value");
+   double c = s.nextDouble();
+   double d = ((b*b)-(4*a*c));
+   if(d>0) {
+      System.out.println("Roots are real and distinct");
+      double x1 = (-b + Math.sqrt(d))/(2*a);
+      double x2 = (-b - Math.sqrt(d))/(2*a);
+      System.out.println("Roots are "+x1+" and "+x2);
+   } else if(d==0) {
+	System.out.println("Roots are equal and positive");
+      double x = -b/(2*a);
+      System.out.println("Equal root is "+x);
+   } else {
+      System.out.println("Roots are imaginary");
+   }
+ }
+}

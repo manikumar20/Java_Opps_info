@@ -1,0 +1,27 @@
+6.1 Write a JAVA program give example for “super” keyword.
+class A {
+	int x = 10;
+	public void show() {
+		System.out.println("A : x = "+x);
+	}
+}
+class B extends A {
+	int x = 20;
+	public void show() {
+		super.show();
+		System.out.println("B: x = "+x);
+	}
+}
+class C extends B {
+	int x = 30;
+	public void show() {
+		super.show();
+		System.out.println("C : x = "+x);
+	}
+}
+class SuperKey {
+	public static void main(String args[]) {
+		C c = new C();
+		c.show();
+	}
+}

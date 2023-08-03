@@ -1,0 +1,23 @@
+1.1 Write a JAVA program to display default value of all primitive data type of JAVA 
+class DefaultValues {
+  static boolean a;
+  static byte b;
+  static short c;
+  static int d;
+  static long e;
+  static float f;
+  static double g;
+  static char h;
+  static String i;
+  public static void main(String args[]) {
+    System.out.println("Default value of boolean datatype is "+a);
+    System.out.println("Default value of byte datatype is "+b);
+    System.out.println("Default value of short datatype is "+c);
+    System.out.println("Default value of int datatype is "+d);
+    System.out.println("Default value of long datatype is "+e);
+    System.out.println("Default value of float datatype is "+f);
+    System.out.println("Default value of double datatype is "+g);
+    System.out.println("Default value of char datatype is "+h);
+    System.out.println("Default value of string datatype is "+i);
+  }
+}

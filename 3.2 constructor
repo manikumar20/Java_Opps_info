@@ -1,0 +1,37 @@
+3.2 Write a JAVA program to implement constructor.
+class Rectangle {
+	int length, breadth;
+	Rectangle() {
+		System.out.println("Constructing Rectangle....");
+		length = 10;
+		breadth = 20;
+	}
+	int rectArea() {
+		return length*breadth;
+	}
+}
+class Area {
+	public static void main(String args[]) {
+		Rectangle r1 = new Rectangle();
+		System.out.println("Area of Rectangle is "+r1.rectArea());
+	}
+}
+
+// parameterised constructor
+class Rectangle {
+	int length, breadth;
+	Rectangle(int l,int b) {
+		System.out.println("Constructing Rectangle....");
+		length = l;
+		breadth = b;
+	}
+	int rectArea() {
+		return length*breadth;
+	}
+}
+class Area1 {
+	public static void main(String args[]) {
+		Rectangle r1 = new Rectangle(10,20);
+		System.out.println("Area of Rectangle is "+r1.rectArea());
+	}
+}

@@ -1,0 +1,31 @@
+1.3 Five Bikers Compete in a race such that they drive at a constant speed which may or may not be the same as the other. To qualify the race, the speed of a racer must be more than the 
+average speed of all 5 racers. Take as input the speed of each racer and print back the speed of qualifying racers. 
+
+import java.util.Scanner;
+class Racers {
+ 	public static void main(String args[]) {
+		Scanner s = new Scanner(System.in);
+		float r1,r2,r3,r4,r5;
+            System.out.println("Enter racer 1 speed");
+		r1 = s.nextFloat();
+            System.out.println("Enter racer 2 speed");
+		r2 = s.nextFloat();
+            System.out.println("Enter racer 3 speed");
+		r3 = s.nextFloat();
+            System.out.println("Enter racer 4 speed");
+		r4 = s.nextFloat();
+            System.out.println("Enter racer 5 speed");
+		r5 = s.nextFloat();
+		double avg = (r1+r2+r3+r4+r5)/5.0;
+		if(r1>avg) 
+			System.out.println("First Racer Qualified");
+		if(r2>avg) 
+			System.out.println("Second Racer Qualified");
+		if(r3>avg) 
+			System.out.println("Third Racer Qualified");
+		if(r4>avg) 
+			System.out.println("Fourth Racer Qualified");
+		if(r5>avg) 
+			System.out.println("Fifth Racer Qualified");
+	}
+}

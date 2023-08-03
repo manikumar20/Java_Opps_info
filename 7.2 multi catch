@@ -1,0 +1,21 @@
+7.2 Write a JAVA program Illustrating Multiple catch clauses 
+class MultiCatch {
+	public static void main(String args[]) {
+		int no,d,r;
+		no = d = r = 0;
+		try {
+			no = Integer.parseInt(args[0]);
+			d = Integer.parseInt(args[1]);
+			r = no/d;
+			System.out.println("result = "+r);
+		} catch(ArrayIndexOutOfBoundsException e1) {
+			System.out.println("Entered less than two values");
+		} catch(NumberFormatException e2) {
+			System.out.println("Conversion of alphabets to int not possible");
+		} catch(ArithmeticException e3) {
+			System.out.println("division by zero");
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+}

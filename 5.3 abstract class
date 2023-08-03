@@ -1,0 +1,48 @@
+5.3 Write a java program for abstract class to find areas of different shapes 
+
+import java.util.*;
+abstract class Shape {
+	Scanner s = new Scanner(System.in);
+	float s1,s2,a;
+	final float pi = 3.14f;
+	public abstract void get_input();
+	public abstract void cal_area();	
+	public void show_area() {
+		System.out.println("Area is :"+a);
+	}
+}
+class Rect extends Shape {
+	public void get_input() {
+		System.out.println("Enter L and B values:");
+		s1 = s.nextFloat();
+		s2 = s.nextFloat();
+	}
+	public void cal_area() {
+		a = s1*s2;
+	}
+}
+class circle extends Shape {
+	public void get_input() {
+		System.out.println("Enter radius of the circle");
+		s1 = s.nextFloat();	
+	}
+	public void cal_area() {
+		a = pi*s1*s1;
+	}
+}
+class Mainclass {
+	public static void main(String args[]) {
+		Shape s;
+		s = new Rect();
+		System.out.println("Rectangle");
+		s.get_input();
+		s.cal_area();
+		s.show_area();
+		
+		s = new circle();
+		System.out.println("Circle");
+		s.get_input();
+		s.cal_area();
+		s.show_area();
+	}
+}

@@ -1,0 +1,23 @@
+4.1 Write a JAVA program to implement constructor overloading.
+class Add {
+	int a,b;
+	Add() {
+		a = 10;
+		b = 20;
+	}
+	Add(int a1,int b1) {
+		a = a1;
+		b = b1;
+	}
+	void add() {
+		System.out.println("Addition of two numbers is "+(a+b));
+	}
+}
+class Conoverloading {
+	public static void main(String args[]) {
+		Add obj = new Add();
+		obj.add();
+		Add obj1 = new Add(2,3);
+		obj1.add();
+	}
+}

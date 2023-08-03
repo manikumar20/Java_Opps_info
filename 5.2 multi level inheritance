@@ -1,0 +1,28 @@
+5.2 Write a JAVA program to implement multi level Inheritanc
+
+class A {
+	int x=10;
+	public void showX() {
+		System.out.println("X = "+x);
+	}
+}
+class B extends A {
+	int y = 20;
+	public void showY() {
+		System.out.println("Y = "+y);
+	}
+}
+class C extends B {
+	int z = 30;
+	public void showZ() {
+		System.out.println("Z = "+z);
+	}
+}
+class MultiLevel {
+	public static void main(String args[]) {
+		C c = new C();
+		c.showX();
+		c.showY();
+		c.showZ();
+	}
+}
